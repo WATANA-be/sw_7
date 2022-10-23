@@ -1,0 +1,7 @@
+<% @products.each do |product| %>
+<p><%= product.name %>
+   <%= product.price %>円
+   <%= link_to '削除',"/products/#{product.id}",method: :delete %>
+</p>
+<% end %>
+<%= link_to '新規追加','/products/new' %>
