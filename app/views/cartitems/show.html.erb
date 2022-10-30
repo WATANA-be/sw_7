@@ -1,0 +1,14 @@
+<h1>Cartitems#new</h1>
+<p>Find me in app/views/cartitems/show.html.erb</p>
+注文内容は
+
+<% @cart.cartitem.each do |cartitem| %>
+    <div>
+        <%= cartitem.product.name %>
+        
+        <%= link_to 'カートから削除', cartitem_path(cartitem.id), method: :delete %>
+    </div>
+<% end %>
+<p> 合計金額: <%= @balance %>円 </p>
+<p> <%= link_to '商品一覧に戻る', products_path %> </p>
+

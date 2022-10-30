@@ -2,6 +2,8 @@
 <p><%= product.name %>
    <%= product.price %>円
    <%= link_to '削除',"/products/#{product.id}",method: :delete %>
+   <%= link_to 'カートに入れる',cartitems_new_path(product_id: product.id) %>
 </p>
 <% end %>
 <%= link_to '新規追加','/products/new' %>
+<%= link_to 'カートを見る','/cartitems/show' %>
